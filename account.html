@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="cotainer">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produts.html">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+                <a href="cart.html"><img src="./images/cart.png" width="30px" height="30px">
+                    <img src="images/menu.png" class="menu-icon" onclick="menutoggle()"></a>
+            </nav>
+        </div>
+    </div>
+    </div>
+<!-- ---------------------------account page ------------------------------>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="Login()">Login</span>
+                        <span onclick="Register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+
+                    <form id="LoginForm">
+                        <input type="text" placeholder="User Name">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forget Password</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="User Name">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!------------------------footer -------------------------------------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Doenload Our App</h3>
+                        <p>Download our app for Android and Ios Mobile Phones</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png">
+                            <img src="images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/logo-white.png">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Numquam sint earum esse,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                            architecto nihil
+                            nesciunt, doloremque ducimus, similique saepe</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Uses Lins</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>FaceBook</li>
+                            <li>Instagram</li>
+                            <li>youtube</li>
+                            <li>github</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copy-write">copy write 2020 - Full Target</p>
+            </div>
+        </div>
+</body>
+
+
+<!------------------ --javascript ------------------------------------>
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+<!----------------- js for toggle form ------------------------------>
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+
+    function Register(){
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+        
+    }
+    function Login(){
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+        
+    }
+</script>
+
+
+</html>
